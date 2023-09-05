@@ -28,8 +28,8 @@ def create_thumbnails(source_dir, target_dir, size=(128, 128)):
 
 
 if __name__ == "__main__":
-    source_directory = "C:\\Users\\USER\\Desktop\\adebayoomolumo.website\\portfolio\\arter\\img\\works\\ML_K8s"
-    thumbnail_directory = "C:\\Users\\USER\\Desktop\\adebayoomolumo.website\\portfolio\\arter\\img\\works\\ML_K8s\\thumbnail"
+    source_directory = <add-your-source_directory>
+    thumbnail_directory = <add-your-thumbnail_directory>
     
     create_thumbnails(source_directory, thumbnail_directory)
 
