@@ -1,8 +1,9 @@
 import os
+import sys
 from PIL import Image
 
 
-def create_thumbnails(source_dir, target_dir, size=(128, 128)):
+def create_thumbnails(source_dir, target_dir, size=(512, 512)):
     # Ensure the target directory exists; create it if it doesn't.
     if not os.path.exists(target_dir):
         os.makedirs(target_dir)
@@ -28,8 +29,13 @@ def create_thumbnails(source_dir, target_dir, size=(128, 128)):
 
 
 if __name__ == "__main__":
-    source_directory = <add-your-source_directory>
-    thumbnail_directory = <add-your-thumbnail_directory>
-    
-    create_thumbnails(source_directory, thumbnail_directory)
+    if len(sys.argv) != 2:
+        print("Usage: python run.py <directory_name>")
+    else:
+        directory_name = sys.argv[1]
+
+        source_directory = f"C:\\Users\\USER\\Desktop\\adebayoomolumo.website\\portfolio\\projects\\img\\works\\{directory_name}"
+        thumbnail_directory = f"C:\\Users\\USER\\Desktop\\adebayoomolumo.website\\portfolio\\projects\\img\\works\\{directory_name}\\thumbnail"
+        
+        create_thumbnails(source_directory, thumbnail_directory)
 
